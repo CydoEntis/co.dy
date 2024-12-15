@@ -1,4 +1,4 @@
-import { Box, Image, Text, Title } from "@mantine/core";
+import { Box, Button, Image, Text, Title } from "@mantine/core";
 import Me from "@/assets/me.png";
 
 function Hero() {
@@ -11,6 +11,7 @@ function Hero() {
       <Text size="lg" c="text">
         Crafting seamless experiences, from pixels to pipelines
       </Text>
+      <Button mt={16} variant="outline" color="inverse" radius="xl">Resume</Button>
     </Box>
   );
 }
