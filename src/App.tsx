@@ -22,7 +22,7 @@ function App() {
       padding="md"
     >
       <AppShell.Header withBorder={false}>
-        <Container >
+        <Container size="xl">
           <Group h="100%">
             <Burger
               opened={opened}
@@ -49,7 +49,7 @@ function App() {
       </AppShell.Navbar>
 
       <AppShell.Main px={0}>
-        <Container style={{ border: "2px solid red" }}>
+        <Container size="xl" style={{ border: "2px solid red" }}>
           <Title>Hello??</Title>
         </Container>
       </AppShell.Main>
