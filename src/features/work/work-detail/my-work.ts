@@ -1,5 +1,4 @@
 import { Technology } from "@/features/technologies/my-technologies/technologies";
-
 export type Work = {
   images: string[];
   name: string;
@@ -10,14 +9,13 @@ export type Work = {
 export const works: Work[] = [
   {
     images: [
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+      "https://cdn.dribbble.com/userupload/13995001/file/original-0441209f42c4e1866c8182388a0044e8.jpg?resize=1024x768&vertical=center",
+      "https://cdn.dribbble.com/userupload/13995002/file/original-2c7d9ee7c6c58ff375817a7fa1e24692.jpg?resize=1024x768&vertical=center",
+      "https://cdn.dribbble.com/userupload/13995003/file/original-a03c404865d3626ce8f230bee903105e.jpg?resize=1024x768&vertical=center",
     ],
     name: "QuestBound",
     description:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Turn your tasks into adventures with Questbound, the project management app that gamifies productivity. Complete quests solo or with friends, earn XP, and level up as you tackle your goals. Work feels like an adventure with Questbound.",
     technologies: [
       {
         id: 1,
@@ -51,14 +49,13 @@ export const works: Work[] = [
   },
   {
     images: [
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+      "https://cdn.dribbble.com/userupload/4678156/file/original-eb0be0cfb7164a1ddafa3edf00a0dcb2.png?resize=1905x1429&vertical=center",
+      "https://cdn.dribbble.com/userupload/4678159/file/original-888015583286d13c774ee46a86b42ca5.png?resize=1024x768&vertical=center",
+      "https://cdn.dribbble.com/userupload/4678158/file/original-085288901981f231069f732b560c93f8.png?resize=1024x768&vertical=center",
     ],
     name: "Task Garden",
     description:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Grow your productivity with TaskGarden, the to-do app where completed tasks help your virtual garden thrive. Earn seeds, unlock milestones, and cultivate your dream garden as you accomplish your goals.",
     technologies: [
       {
         id: 1,
@@ -92,14 +89,13 @@ export const works: Work[] = [
   },
   {
     images: [
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+      "https://cdn.dribbble.com/userupload/9876880/file/original-c943b01d8a56b32573eddb90f8e594b1.png?resize=1905x1429&vertical=center",
+      "https://cdn.dribbble.com/userupload/9876884/file/original-5684cb22caab7167028370cd1b596837.png?resize=1905x1428&vertical=center",
+      "https://cdn.dribbble.com/userupload/9876882/file/original-88fa3d6c92b763692542eb75a0158dae.png?resize=1024x768&vertical=center",
     ],
     name: "TypeCasters",
     description:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Type your way to victory in TypeCasters, a competitive typing game where words are spells. Battle opponents, unlock spellbooks, and improve your typing skills in this fast-paced magical showdown.",
     technologies: [
       {
         id: 1,

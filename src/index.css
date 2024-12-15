@@ -2,17 +2,25 @@
 
 :root {
   --borderColor: #e1e1e1;
+  --modalBackground: #FFFBF5;
 }
 
 [data-mantine-color-scheme="dark"] {
   --borderColor: #3a4d63;
+  --modalBackground: #10171F;
 }
 
 [data-mantine-color-scheme="light"] {
   --borderColor: #e9e0d9;
+  --modalBackground: #FFFBF5;
 }
 
 /* Card border styles */
 .card-border {
   border-color: var(--borderColor); /* Default border color (light mode) */
+}
+
+.mantine-Modal-body,
+.mantine-Modal-header {
+  background: var(--modalBackground);
 }

@@ -1,4 +1,4 @@
-import { Box, Group, Modal, SimpleGrid, Stack, Title } from "@mantine/core";
+import { Box, Group, Modal, SimpleGrid, Stack, Title, Text} from "@mantine/core";
 import Layout from "./components/layout/Layout";
 
 import WorkHistorySection from "./features/work-history/work-history-section/WorkHistorySection";
@@ -25,17 +25,17 @@ function App() {
 
   return (
     <Layout>
-      <Modal opened={workOpened} onClose={closeWork} centered size="xl">
+      <Modal opened={workOpened} onClose={closeWork} centered size={1200}>
         <SimpleGrid cols={2}>
           <Carousel withIndicators height={400}>
             <Carousel.Slide>1</Carousel.Slide>
             <Carousel.Slide>2</Carousel.Slide>
             <Carousel.Slide>3</Carousel.Slide>
           </Carousel>
-          <Stack gap={4}>
-            <Title>{selectedWork?.name}</Title>
-            <Title>{selectedWork?.description}</Title>
-            <Group>
+          <Stack gap={12}>
+            <Title c="text">{selectedWork?.name}</Title>
+            <Text c="text">{selectedWork?.description}</Text>
+            <Group gap={4} w={500}>
               {selectedWork?.technologies.map((tech) => (
                 <TechDetail technology={tech} />
               ))}

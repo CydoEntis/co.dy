@@ -12,6 +12,7 @@ function WorkDetail({ work, onClick }: WorkProps) {
 
   return (
     <Card
+      w={400}
       padding="xs"
       radius="md"
       withBorder
@@ -19,7 +20,7 @@ function WorkDetail({ work, onClick }: WorkProps) {
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
       onClick={() => onClick(work)}
     >
-      <Image src={work.images[0]} height={240} alt="Norway" radius="md" />
+      <Image src={work.images[0]} height={320} alt="Norway" radius="md" />
       <Title size="xl" py={8} fw={700}>
         {work.name}
       </Title>
