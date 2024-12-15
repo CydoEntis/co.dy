@@ -1,4 +1,3 @@
-import { Building } from "lucide-react";
 import { Avatar, Flex, Group, Paper, Stack, Text } from "@mantine/core";
 import { EduDetails } from "./education-details";
 import useGetColorTheme from "../../../components/theme/hooks/useGetColorScheme";
@@ -22,7 +21,7 @@ function EducationDetail({ education }: EducationDetailProps) {
       <Flex justify="space-between" align="center">
         <Group gap={16}>
           <Avatar bg="primary" radius="xl">
-            <Building size={18} />
+            <Text size="xs" fw="700">{education.initials}</Text>
           </Avatar>
           <Stack gap={0}>
             <Text>{education.school}</Text>
