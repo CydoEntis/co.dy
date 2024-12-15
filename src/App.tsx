@@ -6,6 +6,7 @@ import EducationSection from "./features/education/education-section/EducationSe
 import Hero from "./features/hero/Hero";
 import About from "./features/about/About";
 import WorkSection from "./features/work/work-section/WorkSection";
+import Footer from "./features/footer/Footer";
 function App() {
   return (
     <Layout>
@@ -21,6 +22,7 @@ function App() {
           <WorkSection />
         </Stack>
       </SimpleGrid>
+      <Footer />
     </Layout>
   );
 }
