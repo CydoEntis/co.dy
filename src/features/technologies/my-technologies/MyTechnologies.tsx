@@ -1,18 +1,18 @@
 import { Group } from "@mantine/core";
-import { tools } from "./tools";
 import Section from "@/components/section/Section";
-import ToolDetail from "../tool-detail/ToolDetail";
+import { technologies } from "./technologies";
+import TechDetail from "../tech-detail/TechDetail";
 
-function MyTools() {
+function MyTechnologies() {
   return (
     <Section title="My Toolbelt" withDivder={false} spacing={32}>
       <Group gap={8} w={360}>
-        {tools.map((tool, index) => (
-          <ToolDetail tool={tool} index={index} />
+        {technologies.map((tech) => (
+          <TechDetail technology={tech} />
         ))}
       </Group>
     </Section>
   );
 }
 
-export default MyTools;
+export default MyTechnologies;

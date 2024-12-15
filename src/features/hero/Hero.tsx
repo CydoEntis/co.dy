@@ -1,7 +1,7 @@
 import { Box, Button, Image, Text, Title } from "@mantine/core";
 import Me from "@/assets/me.png";
-import MyTools from "../tools/my-tools/MyTools";
 import { useMediaQuery } from "@mantine/hooks";
+import MyTechnologies from "../technologies/my-technologies/MyTechnologies";
 
 function Hero() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -24,7 +24,7 @@ function Hero() {
       <Button mt={16} variant="outline" color="inverse" radius="xl">
         Resume
       </Button>
-      <MyTools />
+      <MyTechnologies />
     </Box>
   );
 }

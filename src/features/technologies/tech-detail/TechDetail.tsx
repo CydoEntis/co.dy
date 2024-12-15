@@ -1,13 +1,12 @@
-import { Tool } from "../my-tools/tools";
 import { Paper, Text } from "@mantine/core";
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
+import { Technology } from "../my-technologies/technologies";
 
-type ToolDetailProps = {
-  tool: Tool;
-  index: number;
+type TechDetailProps = {
+  technology: Technology;
 };
 
-function ToolDetail({ tool, index }: ToolDetailProps) {
+function TechDetail({ technology }: TechDetailProps) {
   const { isLightMode } = useGetColorTheme();
 
   return (
@@ -16,14 +15,14 @@ function ToolDetail({ tool, index }: ToolDetailProps) {
       p={8}
       bg="secondary"
       c="inverse"
-      key={index}
+      key={technology.name}
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Text size="sm" fw={700} c="altText">
-        {tool.name}
+        {technology.name}
       </Text>
     </Paper>
   );
 }
 
-export default ToolDetail;
+export default TechDetail;

@@ -4,7 +4,7 @@ import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
 
 type WorkProps = {
   work: Work;
-  onClick: () => void;
+  onClick: (work: Work) => void;
 };
 
 function WorkDetail({ work, onClick }: WorkProps) {
@@ -17,7 +17,7 @@ function WorkDetail({ work, onClick }: WorkProps) {
       withBorder
       bg="secondary"
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
-      onClick={onClick}
+      onClick={() => onClick(work)}
     >
       <Image src={work.images[0]} height={240} alt="Norway" radius="md" />
       <Title size="xl" py={8} fw={700}>
