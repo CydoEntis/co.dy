@@ -7,15 +7,13 @@ import {
   Button,
   Group,
   Divider,
-  Paper,
-  Avatar,
   Stack,
-  Flex,
 } from "@mantine/core";
 import Layout from "./components/layout/Layout";
 import Me from "@/assets/me.png";
-import { Building } from "lucide-react";
+import WorkHistory from "./features/work-history/WorkHistory";
 import useGetColorTheme from "./components/theme/hooks/useGetColorScheme";
+import { jobs } from "./features/work-history/work-history";
 function App() {
   const { isLightMode } = useGetColorTheme();
 
@@ -54,30 +52,9 @@ function App() {
             <Title fw="400" size="xl">
               Work Experience
             </Title>
-            <Paper
-              bg="secondary"
-              withBorder
-              px={16}
-              py={8}
-              radius="xl"
-              style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
-            >
-              <Flex justify="space-between" align="center">
-                <Group gap={16}>
-                  <Avatar bg="primary" radius="xl">
-                    <Building size={18} />
-                  </Avatar>
-                  <Stack gap={0}>
-                    <Text>Full Stack Developer</Text>
-                    <Text fw="700">DriveSmart</Text>
-                  </Stack>
-                </Group>
-
-                <Text size="xs" c="altText">
-                  April 2024 - August 2024
-                </Text>
-              </Flex>
-            </Paper>
+            {jobs.map((job) => (
+              <WorkHistory job={job} />
+            ))}
           </Stack>
         </Box>
       </SimpleGrid>

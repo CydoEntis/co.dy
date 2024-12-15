@@ -3,20 +3,20 @@ import { Moon, Sun } from "lucide-react";
 import useGetColorTheme from "./hooks/useGetColorScheme";
 
 function ThemeToggle() {
-	const { setColorScheme } = useMantineColorScheme();
-	const { isLightMode } = useGetColorTheme();
+  const { setColorScheme } = useMantineColorScheme();
+  const { isLightMode } = useGetColorTheme();
 
-	return (
-		<ActionIcon
-			onClick={() => setColorScheme(isLightMode ? "dark" : "light")}
-			variant="default"
-			size="lg"
-			aria-label="Toggle color scheme"
-			bg="primary"
-		>
-			{isLightMode ? <Moon size={16} /> : <Sun size={16} />}
-		</ActionIcon>
-	);
+  return (
+    <ActionIcon
+      onClick={() => setColorScheme(isLightMode ? "dark" : "light")}
+      variant="subtle"
+      size="lg"
+      aria-label="Toggle color scheme"
+      c="inverse"
+    >
+      {isLightMode ? <Moon size={16} /> : <Sun size={16} />}
+    </ActionIcon>
+  );
 }
 
 export default ThemeToggle;

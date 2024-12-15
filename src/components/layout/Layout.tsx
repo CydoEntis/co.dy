@@ -11,7 +11,7 @@ function Layout({ children }: LayoutProps) {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: 80 }}
       navbar={{
         width: 300,
         breakpoint: "sm",

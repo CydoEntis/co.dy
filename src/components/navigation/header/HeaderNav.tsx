@@ -1,5 +1,5 @@
 import ThemeToggle from "@/components/theme/ThemeToggle";
-import { Burger, Button, Container, Group, Title } from "@mantine/core";
+import { Burger, Button, Container, Group, Title, Text } from "@mantine/core";
 import { MoveUpRight } from "lucide-react";
 
 type HeaderNavProps = {
@@ -9,15 +9,14 @@ type HeaderNavProps = {
 
 function HeaderNav({ onToggle, opened }: HeaderNavProps) {
   return (
-    <Container size="xl">
+    <Container size="xl" py={24} px={16}>
       <Burger opened={opened} onClick={onToggle} hiddenFrom="xs" size="sm" />
       <Group justify="space-between" style={{ flex: 1 }}>
-        <Group>
-          <Title size="xl">Co.dy</Title>
-          <p>Tesrt</p>
-          <p>Tesrt</p>
-          <p>Tesrt</p>
-          <p>Tesrt</p>
+        <Group gap={16}>
+          <Title size="xl" mr={60} c="text">Co.dy</Title>
+          <Text>Work History</Text>
+          <Text>Projects</Text>
+          <Text>Contact</Text>
         </Group>
 
         <Group ml="xl" gap={8} visibleFrom="xs">
