@@ -29,7 +29,7 @@ function Footer() {
         <Group>
           <Image src={Me} w={80} radius="100%" />
           <Stack gap={2}>
-            <Title size="1.5rem" c="altText">
+            <Title size="1.5rem" c="text">
               I'm Cody Stine
             </Title>
             <Text>Crafting seamless experiences, from pixels to pipelines</Text>
@@ -37,10 +37,10 @@ function Footer() {
         </Group>
 
         <Group>
-          <Anchor c="altText" underline="hover" href="#about">
+          <Anchor c="inverse" underline="hover" href="#about">
             About
           </Anchor>
-          <Anchor c="altText" underline="hover" href="#work">
+          <Anchor c="inverse" underline="hover" href="#work">
             My work
           </Anchor>
         </Group>
