@@ -25,9 +25,7 @@ function Layout({ children }: LayoutProps) {
       </AppShell.Navbar>
 
       <AppShell.Main px={0} bg={"primary"}>
-        <Container size="xl" style={{ border: "2px solid red" }}>
-          {children}
-        </Container>
+        <Container size="lg">{children}</Container>
       </AppShell.Main>
     </AppShell>
   );
