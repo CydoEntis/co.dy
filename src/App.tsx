@@ -6,17 +6,13 @@ import {
   Text,
   Button,
   Group,
-  Divider,
-  Stack,
 } from "@mantine/core";
 import Layout from "./components/layout/Layout";
 import Me from "@/assets/me.png";
-import WorkHistory from "./features/work-history/WorkHistory";
-import useGetColorTheme from "./components/theme/hooks/useGetColorScheme";
-import { jobs } from "./features/work-history/work-history";
-function App() {
-  const { isLightMode } = useGetColorTheme();
 
+import WorkHistorySection from "./features/work-history/work-history-section/WorkHistorySection";
+import EducationSection from "./features/education/education-section/EducationSection";
+function App() {
   return (
     <Layout>
       <SimpleGrid cols={2} px={32}>
@@ -45,17 +41,8 @@ function App() {
             </Group>
           </Box>
 
-          <Stack pt={64}>
-            <Divider
-              style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
-            />
-            <Title fw="400" size="xl">
-              Work Experience
-            </Title>
-            {jobs.map((job) => (
-              <WorkHistory job={job} />
-            ))}
-          </Stack>
+          <WorkHistorySection />
+          <EducationSection />
         </Box>
       </SimpleGrid>
     </Layout>

@@ -1,13 +1,13 @@
 import { Building } from "lucide-react";
 import { Avatar, Flex, Group, Paper, Stack, Text } from "@mantine/core";
-import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
-import { JobDetails } from "./work-history";
+import { EduDetails } from "./education-details";
+import useGetColorTheme from "../../../components/theme/hooks/useGetColorScheme";
 
-type WorkHistoryProps = {
-  job: JobDetails;
+type EducationDetailProps = {
+  education: EduDetails;
 };
 
-function WorkHistory({ job }: WorkHistoryProps) {
+function EducationDetail({ education }: EducationDetailProps) {
   const { isLightMode } = useGetColorTheme();
 
   return (
@@ -17,8 +17,7 @@ function WorkHistory({ job }: WorkHistoryProps) {
       px={16}
       py={8}
       radius="xl"
-      //   style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
-      className={isLightMode ? "card-border-light" : "card-border-dark"}
+      style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Flex justify="space-between" align="center">
         <Group gap={16}>
@@ -26,17 +25,17 @@ function WorkHistory({ job }: WorkHistoryProps) {
             <Building size={18} />
           </Avatar>
           <Stack gap={0}>
-            <Text>{job.jobTitle}</Text>
-            <Text fw="700">{job.company}</Text>
+            <Text>{education.school}</Text>
+            <Text fw="700">{education.degree}</Text>
           </Stack>
         </Group>
 
         <Text size="xs" c="altText">
-          {job.startDate} - {job.endDate}
+          {education.startDate} - {education.endDate}
         </Text>
       </Flex>
     </Paper>
   );
 }
 
-export default WorkHistory;
+export default EducationDetail;

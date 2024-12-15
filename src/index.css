@@ -1,1 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --borderColor: #e1e1e1;
+}
+
+[data-mantine-color-scheme="dark"] {
+  --borderColor: #3a4d63;
+}
+
+[data-mantine-color-scheme="light"] {
+  --borderColor: #e9e0d9;
+}
+
+/* Card border styles */
+.card-border {
+  border-color: var(--borderColor); /* Default border color (light mode) */
+}
