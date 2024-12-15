@@ -17,7 +17,7 @@ function WorkHistoryDetail({ job }: WorkHistoryDetailProps) {
       px={16}
       py={8}
       radius="xl"
-        style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
+      style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Flex justify="space-between" align="center">
         <Group gap={16}>

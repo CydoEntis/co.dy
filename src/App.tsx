@@ -5,6 +5,7 @@ import WorkHistorySection from "./features/work-history/work-history-section/Wor
 import EducationSection from "./features/education/education-section/EducationSection";
 import Hero from "./features/hero/Hero";
 import About from "./features/about/About";
+import WorkSection from "./features/work/work-section/WorkSection";
 function App() {
   return (
     <Layout>
@@ -15,6 +16,7 @@ function App() {
           <About />
           <WorkHistorySection />
           <EducationSection />
+          <WorkSection />
         </Stack>
       </SimpleGrid>
     </Layout>
