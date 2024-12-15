@@ -15,7 +15,10 @@ import {
 import Layout from "./components/layout/Layout";
 import Me from "@/assets/me.png";
 import { Building } from "lucide-react";
+import useGetColorTheme from "./components/theme/hooks/useGetColorScheme";
 function App() {
+  const { isLightMode } = useGetColorTheme();
+
   return (
     <Layout>
       <SimpleGrid cols={2} px={32}>
@@ -45,11 +48,20 @@ function App() {
           </Box>
 
           <Stack pt={64}>
-            <Divider />
+            <Divider
+              style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
+            />
             <Title fw="400" size="xl">
               Work Experience
             </Title>
-            <Paper bg="secondary" withBorder px={16} py={8} radius="xl">
+            <Paper
+              bg="secondary"
+              withBorder
+              px={16}
+              py={8}
+              radius="xl"
+              style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
+            >
               <Flex justify="space-between" align="center">
                 <Group gap={16}>
                   <Avatar bg="primary" radius="xl">
@@ -61,7 +73,7 @@ function App() {
                   </Stack>
                 </Group>
 
-                <Text size="xs" c="grey">
+                <Text size="xs" c="altText">
                   April 2024 - August 2024
                 </Text>
               </Flex>
