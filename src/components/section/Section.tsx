@@ -5,14 +5,16 @@ import useGetColorTheme from "../theme/hooks/useGetColorScheme";
 type SectionProps = {
   title: string;
   children: ReactNode;
+  withDivder?: boolean;
+  spacing?: number;
 };
 
-function Section({ title, children }: SectionProps) {
+function Section({ title, children, withDivder = true, spacing = 64 }: SectionProps) {
   const { isLightMode } = useGetColorTheme();
 
   return (
-    <Stack pt={64}>
-      <Divider style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }} />
+    <Stack pt={spacing}>
+      {withDivder && <Divider color={isLightMode ? "#E9E0D9" : "#3A4D63"} />}
       <Title fw="400" size="xl">
         {title}
       </Title>
