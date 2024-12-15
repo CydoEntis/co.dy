@@ -6,9 +6,15 @@ import {
   Text,
   Button,
   Group,
+  Divider,
+  Paper,
+  Avatar,
+  Stack,
+  Flex,
 } from "@mantine/core";
 import Layout from "./components/layout/Layout";
 import Me from "@/assets/me.png";
+import { Building } from "lucide-react";
 function App() {
   return (
     <Layout>
@@ -37,6 +43,30 @@ function App() {
               </Button>
             </Group>
           </Box>
+
+          <Stack pt={64}>
+            <Divider />
+            <Title fw="400" size="xl">
+              Work Experience
+            </Title>
+            <Paper bg="secondary" withBorder px={16} py={8} radius="xl">
+              <Flex justify="space-between" align="center">
+                <Group gap={16}>
+                  <Avatar bg="primary" radius="xl">
+                    <Building size={18} />
+                  </Avatar>
+                  <Stack gap={0}>
+                    <Text>Full Stack Developer</Text>
+                    <Text fw="700">DriveSmart</Text>
+                  </Stack>
+                </Group>
+
+                <Text size="xs" c="grey">
+                  April 2024 - August 2024
+                </Text>
+              </Flex>
+            </Paper>
+          </Stack>
         </Box>
       </SimpleGrid>
     </Layout>
