@@ -4,10 +4,11 @@ import "./index.css";
 import App from "./App.tsx";
 import { MantineProvider } from "@mantine/core";
 import '@mantine/core/styles.css';
+import theme from "./components/theme/theme.config.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider>
+    <MantineProvider theme={theme}>
       <App />
     </MantineProvider>
   </StrictMode>
