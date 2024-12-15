@@ -1,4 +1,4 @@
-export type ToolDetail = {
+export type Tool = {
     name: string;
  
 }
