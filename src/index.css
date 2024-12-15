@@ -2,17 +2,22 @@
 
 :root {
   --borderColor: #e1e1e1;
-  --modalBackground: #FFFBF5;
+  --modalBackground: #fffbf5;
+  --control: #fff;
 }
 
 [data-mantine-color-scheme="dark"] {
   --borderColor: #3a4d63;
-  --modalBackground: #10171F;
+  --modalBackground: #10171f;
+  --control: #3a4d63;
+  --control-foreground: #f5f5f5;
 }
 
 [data-mantine-color-scheme="light"] {
   --borderColor: #e9e0d9;
-  --modalBackground: #FFFBF5;
+  --modalBackground: #fffbf5;
+  --control: #fff;
+  --control-foregrond: #181818;
 }
 
 /* Card border styles */
@@ -23,4 +28,11 @@
 .mantine-Modal-body,
 .mantine-Modal-header {
   background: var(--modalBackground);
+}
+
+.mantine-Carousel-control {
+  background: var(--control);
+  border-color: var(--control);
+  opacity: 1;
+  color: var(--control-foregrond);
 }

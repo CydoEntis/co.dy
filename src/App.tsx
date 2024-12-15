@@ -1,4 +1,14 @@
-import { Box, Group, Modal, SimpleGrid, Stack, Title, Text} from "@mantine/core";
+import {
+  Box,
+  Group,
+  Modal,
+  SimpleGrid,
+  Stack,
+  Title,
+  Text,
+  Image,
+  Button,
+} from "@mantine/core";
 import Layout from "./components/layout/Layout";
 
 import WorkHistorySection from "./features/work-history/work-history-section/WorkHistorySection";
@@ -12,6 +22,7 @@ import { Carousel } from "@mantine/carousel";
 import { useState } from "react";
 import { Work } from "./features/work/work-detail/my-work";
 import TechDetail from "./features/technologies/tech-detail/TechDetail";
+import { Github, Globe2 } from "lucide-react";
 function App() {
   const [workOpened, { open: openWork, close: closeWork }] =
     useDisclosure(false);
@@ -25,20 +36,42 @@ function App() {
 
   return (
     <Layout>
-      <Modal opened={workOpened} onClose={closeWork} centered size={1200}>
+      <Modal opened={workOpened} onClose={closeWork} centered size={1200} withCloseButton={false}>
         <SimpleGrid cols={2}>
-          <Carousel withIndicators height={400}>
-            <Carousel.Slide>1</Carousel.Slide>
-            <Carousel.Slide>2</Carousel.Slide>
-            <Carousel.Slide>3</Carousel.Slide>
+          <Carousel height={400}>
+            {selectedWork?.images.map((image) => (
+              <Carousel.Slide>
+                <Image src={image} />
+              </Carousel.Slide>
+            ))}
           </Carousel>
-          <Stack gap={12}>
+          <Stack gap={20}>
             <Title c="text">{selectedWork?.name}</Title>
             <Text c="text">{selectedWork?.description}</Text>
             <Group gap={4} w={500}>
               {selectedWork?.technologies.map((tech) => (
                 <TechDetail technology={tech} />
               ))}
+            </Group>
+
+            <Group gap={4}>
+              <Button
+                radius="xl"
+                variant="filled"
+                bg="inverse"
+                c="primary"
+                leftSection={<Globe2 size={18} />}
+              >
+                Live Link
+              </Button>
+              <Button
+                variant="outline"
+                radius="xl"
+                color="inverse"
+                leftSection={<Github size={18} />}
+              >
+                Git Repo
+              </Button>
             </Group>
           </Stack>
         </SimpleGrid>

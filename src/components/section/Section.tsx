@@ -15,7 +15,7 @@ function Section({ title, children, withDivder = true, spacing = 64 }: SectionPr
   return (
     <Stack pt={spacing}>
       {withDivder && <Divider color={isLightMode ? "#E9E0D9" : "#3A4D63"} />}
-      <Title fw="400" size="xl">
+      <Title fw="400" size="1.25rem">
         {title}
       </Title>
       {children}
