@@ -21,7 +21,7 @@ function HeaderNav({ onToggle, opened }: HeaderNavProps) {
         </Group>
 
         <Group ml="xl" gap={8} visibleFrom="xs">
-          <Button rightSection={<MoveUpRight size={18} />} variant="outline" radius="xl" color="grey">Lets Talk</Button>
+          <Button rightSection={<MoveUpRight size={18} />} variant="outline" radius="xl" color="inverse">Lets Talk</Button>
           <ThemeToggle />
         </Group>
       </Group>
