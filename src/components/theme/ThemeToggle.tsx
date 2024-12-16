@@ -2,7 +2,11 @@ import { useMantineColorScheme, ActionIcon } from "@mantine/core";
 import { Moon, Sun } from "lucide-react";
 import useGetColorTheme from "./hooks/useGetColorScheme";
 
-function ThemeToggle() {
+type ThemeToggleProps = {
+  size?: number;
+}
+
+function ThemeToggle({size = 16}: ThemeToggleProps) {
   const { setColorScheme } = useMantineColorScheme();
   const { isLightMode } = useGetColorTheme();
 
@@ -14,7 +18,7 @@ function ThemeToggle() {
       aria-label="Toggle color scheme"
       c="inverse"
     >
-      {isLightMode ? <Moon size={16} /> : <Sun size={16} />}
+      {isLightMode ? <Moon size={size} /> : <Sun size={size} />}
     </ActionIcon>
   );
 }

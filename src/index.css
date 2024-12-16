@@ -4,6 +4,7 @@
   --borderColor: #e1e1e1;
   --modalBackground: #fffbf5;
   --control: #fff;
+  --dialog-size: 1200px !important;
 }
 
 [data-mantine-color-scheme="dark"] {
@@ -35,4 +36,9 @@
   border-color: var(--control);
   opacity: 1;
   color: var(--control-foregrond);
+}
+
+.mantine-Dialog-root {
+  width: 800px !important;
+  border: 2px solid red;
 }
