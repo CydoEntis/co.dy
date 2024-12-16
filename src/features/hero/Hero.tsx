@@ -8,7 +8,7 @@ import { profile } from "console";
 import { useEffect, useState } from "react";
 
 function Hero() {
-  const isDesktop = useMediaQuery("(min-width: 992px)");
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const { isLightMode } = useGetColorTheme();
 
   return (

@@ -3,7 +3,7 @@ import { Box, Button, Group, Title } from "@mantine/core";
 
 function About() {
   return (
-    <Section withDivider={false} spacing={0}>
+    <Section id="about-section" withDivider={false} spacing={0}>
       <Box
         w={{ base: "100%", md: 460 }}
       >
