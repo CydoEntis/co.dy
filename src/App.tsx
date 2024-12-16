@@ -83,7 +83,7 @@ function App() {
         </SimpleGrid>
       </Modal>
       <SimpleGrid
-        cols={{base: 1, md: 2 }}
+        cols={{base: 1, sm: 2 }}
         px={{ base: 8, sm: 8, lg: 32 }}
       >
         <Box pos="relative">

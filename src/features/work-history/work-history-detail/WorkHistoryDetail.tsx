@@ -1,16 +1,6 @@
-import {
-  Avatar,
-  Divider,
-  Flex,
-  Group,
-  Paper,
-  Stack,
-  Text,
-  Timeline,
-} from "@mantine/core";
+import { Flex, Paper, Stack, Text } from "@mantine/core";
 import useGetColorTheme from "../../../components/theme/hooks/useGetColorScheme";
 import { useMediaQuery } from "@mantine/hooks";
-import { Building, Building2, Calendar } from "lucide-react";
 import { JobDetails } from "./work-history-details";
 
 type JobDetailProps = {
@@ -31,22 +21,22 @@ function JobDetail({ job }: JobDetailProps) {
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Flex justify="space-between" align="center">
-        <Group gap={16}>
-          <Avatar bg="primary" radius="xl">
-            <Text size="xs" fw="700">
-              <Building2 />
+        <Stack gap={0}>
+          <Text size="sm">{job.jobTitle}</Text>
+          <Text fw="700" size="sm">
+            {job.company}
+          </Text>
+          {!isDesktop && (
+            <Text size="xs" mt={4} c="dimmed">
+              {job.startDate} - {job.endDate}
             </Text>
-          </Avatar>
-          <Stack gap={0}>
-            <Text size="sm">{job.jobTitle}</Text>
-            <Text fw="700" size="sm">
-              {job.company}
-            </Text>
-          </Stack>
-        </Group>
-        <Text size="xs" mt={4} c="dimmed">
-          {job.startDate} - {job.endDate}
-        </Text>
+          )}
+        </Stack>
+        {isDesktop && (
+          <Text size="xs" mt={4} c="dimmed">
+            {job.startDate} - {job.endDate}
+          </Text>
+        )}
       </Flex>
     </Paper>
 

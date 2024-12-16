@@ -1,11 +1,15 @@
 import { Box, Button, Image, Text, Title } from "@mantine/core";
+import MeLight from "@/assets/me-light.png";
+import MeDark from "@/assets/me-dark.png";
 import { useMediaQuery } from "@mantine/hooks";
 import MyTechnologies from "../technologies/my-technologies/MyTechnologies";
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
+import { profile } from "console";
+import { useEffect, useState } from "react";
 
 function Hero() {
   const isDesktop = useMediaQuery("(min-width: 992px)");
-  const isLightMode = useGetColorTheme();
+  const { isLightMode } = useGetColorTheme();
 
   return (
     <Box
@@ -15,7 +19,7 @@ function Hero() {
         zIndex: 10,
       }}
     >
-      <Image src={isLightMode ? : } w={200} radius="lg" />
+      <Image src={isLightMode ? MeLight : MeDark} w={200} radius="lg" />
       <Title size="3rem" fw={400} mt={16} c="text">
         I'm Cody Stine
       </Title>

@@ -22,24 +22,22 @@ function EducationDetail({ education }: EducationDetailProps) {
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Flex justify="space-between" align="center">
-        <Group gap={16}>
-          <Avatar bg="primary" radius="xl">
-            <Text size="xs" fw="700">
-              <Text size="xs" fw="700">
-                {education.initials}
-              </Text>
+        <Stack gap={0}>
+          <Text size="sm">{education.school}</Text>
+          <Text fw="700" size="sm">
+            {education.degree}
+          </Text>
+          {!isDesktop && (
+            <Text size="xs" mt={4} c="dimmed">
+              {education.startDate} - {education.endDate}
             </Text>
-          </Avatar>
-          <Stack gap={0}>
-            <Text size="sm">{education.school}</Text>
-            <Text fw="700" size="sm">
-              {education.degree}
-            </Text>
-          </Stack>
-        </Group>
-        <Text size="xs" mt={4} c="dimmed">
-          {education.startDate} - {education.endDate}
-        </Text>
+          )}
+        </Stack>
+        {isDesktop && (
+          <Text size="xs" mt={4} c="dimmed">
+            {education.startDate} - {education.endDate}
+          </Text>
+        )}
       </Flex>
     </Paper>
 

@@ -9,7 +9,8 @@ import {
   Anchor,
   Button,
 } from "@mantine/core";
-import Me from "@/assets/me.png";
+import MeLight from "@/assets/me-light.png";
+import MeDark from "@/assets/me-dark.png";
 import { MoveUpRight } from "lucide-react";
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
 
@@ -27,7 +28,7 @@ function Footer() {
     >
       <Flex justify="space-between" align="center">
         <Group>
-          <Image src={Me} w={80} radius="md" />
+          <Image src={isLightMode ? MeLight : MeDark} w={80} radius="md" />
           <Stack gap={2}>
             <Title size="1.5rem" c="text">
               I'm Cody Stine
