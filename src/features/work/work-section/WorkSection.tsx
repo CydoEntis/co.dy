@@ -12,7 +12,7 @@ function WorkSection({ onOpen }: WorkSectionProps) {
         <WorkDetail work={work} key={index} onClick={onOpen} />
       ))}
     </Section>
-  );
+);
 }
 
 export default WorkSection;

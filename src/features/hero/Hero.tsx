@@ -4,8 +4,6 @@ import MeDark from "@/assets/me-dark.png";
 import { useMediaQuery } from "@mantine/hooks";
 import MyTechnologies from "../technologies/my-technologies/MyTechnologies";
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
-import { profile } from "console";
-import { useEffect, useState } from "react";
 
 function Hero() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
