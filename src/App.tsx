@@ -36,8 +36,14 @@ function App() {
 
   return (
     <Layout>
-      <Modal opened={workOpened} onClose={closeWork} centered size={1200} withCloseButton={false}>
-        <SimpleGrid cols={2}>
+      <Modal
+        opened={workOpened}
+        onClose={closeWork}
+        centered
+        size={1200}
+        withCloseButton={false}
+      >
+        <SimpleGrid cols={{ base: 1, sm: 1, lg: 2 }}>
           <Carousel height={400}>
             {selectedWork?.images.map((image) => (
               <Carousel.Slide>
@@ -76,7 +82,10 @@ function App() {
           </Stack>
         </SimpleGrid>
       </Modal>
-      <SimpleGrid cols={2} px={32}>
+      <SimpleGrid
+        cols={{base: 1, md: 2 }}
+        px={{ base: 8, sm: 8, lg: 32 }}
+      >
         <Box pos="relative">
           <Hero />
         </Box>

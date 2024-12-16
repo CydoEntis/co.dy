@@ -21,13 +21,13 @@ function Footer() {
       mt={32}
       bg="secondary"
       p={32}
-      radius="10rem"
+      radius="md"
       withBorder
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Flex justify="space-between" align="center">
         <Group>
-          <Image src={Me} w={80} radius="100%" />
+          <Image src={Me} w={80} radius="md" />
           <Stack gap={2}>
             <Title size="1.5rem" c="text">
               I'm Cody Stine
@@ -50,7 +50,7 @@ function Footer() {
           variant="filled"
           bg="inverse"
           c="primary"
-          radius="xl"
+          radius="md"
         >
           Lets Talk
         </Button>

@@ -12,14 +12,14 @@ export const education = [
         degree: "B.S Software Engineering",
         initials: "WGU",
         startDate: "May 2024",
-        endDate: "August 2024",
+        endDate: "Aug 2024",
     },
     {
         school: "Ocean County College",
         degree: "A.S Computer Science",
         initials: "OCC",
-        startDate: "September 2019",
-        endDate: "December 2021",
+        startDate: "Sep 2019",
+        endDate: "Dec 2021",
     },
 ]
 

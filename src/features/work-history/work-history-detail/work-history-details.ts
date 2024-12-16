@@ -9,26 +9,26 @@ export const jobs = [
     {
         jobTitle: "Full Stack Developer",
         company: "DriveSmart",
-        startDate: "April 2024",
-        endDate: "August 2024",
+        startDate: "Apr 2024",
+        endDate: "Aug 2024",
     },
     {
         jobTitle: "Frontend Developer",
         company: "DriveSmart",
-        startDate: "April 2023",
-        endDate: "April 2024",
+        startDate: "Apr 2023",
+        endDate: "Apr 2024",
     },
     {
         jobTitle: "Full Stack Developer",
         company: "BayMaster",
-        startDate: "January 2021",
+        startDate: "Jan 2021",
         endDate: "May 2022",
     },
     {
-        jobTitle: "Computer Science Tutor",
+        jobTitle: "Comp Sci Tutor",
         company: "Ocean County College",
-        startDate: "September 2019",
-        endDate: "December 2021",
+        startDate: "Sep 2019",
+        endDate: "Dec 2021",
     }
 ]
 
