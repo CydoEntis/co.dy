@@ -5,8 +5,8 @@ import Section from "@/components/section/Section";
 function EducationSection() {
   return (
     <Section title="Education">
-      {education.map((edu) => (
-        <EducationDetail education={edu} />
+      {education.map((edu, index) => (
+        <EducationDetail education={edu} key={index} />
       ))}
     </Section>
   );

@@ -5,8 +5,8 @@ import WorkHistoryDetail from "../work-history-detail/WorkHistoryDetail";
 function WorkHistorySection() {
   return (
     <Section title="Work History">
-      {jobs.map((job) => (
-        <WorkHistoryDetail job={job} />
+      {jobs.map((job, index) => (
+        <WorkHistoryDetail key={index} job={job} />
       ))}
     </Section>
   );

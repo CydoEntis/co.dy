@@ -8,8 +8,8 @@ type WorkSectionProps = {
 function WorkSection({ onOpen }: WorkSectionProps) {
   return (
     <Section title="My Work">
-      {works.map((work) => (
-        <WorkDetail work={work} onClick={onOpen} />
+      {works.map((work, index) => (
+        <WorkDetail work={work} key={index} onClick={onOpen} />
       ))}
     </Section>
   );
