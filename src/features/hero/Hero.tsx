@@ -23,7 +23,7 @@ function Hero() {
       <Title size="3rem" fw={400} mt={16} c="text">
         I'm Cody Stine
       </Title>
-      <Text size="lg" c="text" w={320}>
+      <Text size="lg" c="text" w={300}>
         Crafting seamless experiences, from pixels to pipelines
       </Text>
       <Button mt={16} variant="outline" color="inverse" radius="md">
