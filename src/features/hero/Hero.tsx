@@ -24,7 +24,15 @@ function Hero() {
       <Text size="lg" c="text" w={300}>
         Crafting seamless experiences, from pixels to pipelines
       </Text>
-      <Button mt={16} variant="outline" color="inverse" radius="md">
+      <Button
+        mt={16}
+        variant="outline"
+        color="inverse"
+        radius="md"
+        component="a"
+        href="/resume.pdf"
+        download="resume.pdf"
+      >
         Resume
       </Button>
       <MyTechnologies />
