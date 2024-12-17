@@ -6,16 +6,21 @@ import { ReactNode } from "react";
 import MobileNav from "../navigation/mobile/MobileNav";
 
 type LayoutProps = {
+  onOpenContact: () => void;
   children: ReactNode;
 };
-function Layout({ children }: LayoutProps) {
+function Layout({ children, onOpenContact }: LayoutProps) {
   const [opened, { close, toggle }] = useDisclosure();
 
   return (
     <AppShell header={{ height: 80 }} padding="md">
-      <Header onToggle={toggle} opened={opened} />
+      <Header onToggle={toggle} opened={opened} onOpenContact={onOpenContact} />
 
-      <MobileNav opened={opened} onClose={close} />
+      <MobileNav
+        opened={opened}
+        onClose={close}
+        onOpenContact={onOpenContact}
+      />
 
       <AppShell.Main px={0} bg={"primary"}>
         <Container size="lg">{children}</Container>

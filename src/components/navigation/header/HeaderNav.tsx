@@ -1,12 +1,5 @@
 import ThemeToggle from "@/components/theme/ThemeToggle";
-import {
-  Burger,
-  Button,
-  Container,
-  Group,
-  Title,
-  Flex,
-} from "@mantine/core";
+import { Burger, Button, Container, Group, Title, Flex } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { MoveUpRight } from "lucide-react";
 import useNavigation from "../hooks/useNavigation";
@@ -15,9 +8,10 @@ import Link from "../Link";
 type HeaderNavProps = {
   onToggle: () => void;
   opened: boolean;
+  onOpenContact: () => void;
 };
 
-function HeaderNav({ onToggle, opened }: HeaderNavProps) {
+function HeaderNav({ onToggle, opened, onOpenContact }: HeaderNavProps) {
   const isDesktop = useMediaQuery("(min-width: 48em)");
   const sectionIds = ["about-section", "my-work-section"];
   const { activeSection, activeRouteHandler } = useNavigation({
@@ -47,6 +41,7 @@ function HeaderNav({ onToggle, opened }: HeaderNavProps) {
             </Group>
             <Group ml="xl" gap={8} visibleFrom="xs">
               <Button
+                onClick={onOpenContact}
                 rightSection={<MoveUpRight size={18} />}
                 variant="outline"
                 radius="md"

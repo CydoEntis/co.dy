@@ -1,6 +1,6 @@
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
 import ThemeToggle from "@/components/theme/ThemeToggle";
-import { Anchor, Button, Drawer, Flex, Group } from "@mantine/core";
+import { Button, Drawer, Flex, Group } from "@mantine/core";
 import { MoveUpRight } from "lucide-react";
 import useNavigation from "../hooks/useNavigation";
 import Link from "../Link";
@@ -8,9 +8,10 @@ import Link from "../Link";
 type MobileNavProps = {
   opened: boolean;
   onClose: () => void;
+  onOpenContact: () => void;
 };
 
-function MobileNav({ opened, onClose }: MobileNavProps) {
+function MobileNav({ opened, onClose, onOpenContact }: MobileNavProps) {
   const { isLightMode } = useGetColorTheme();
   const sectionIds = ["about-section", "my-work-section"];
   const { activeSection, activeRouteHandler } = useNavigation({
@@ -55,6 +56,7 @@ function MobileNav({ opened, onClose }: MobileNavProps) {
         <Group>
           <ThemeToggle />
           <Button
+            onClick={onOpenContact}
             size="sm"
             rightSection={<MoveUpRight size={22} />}
             variant="outline"

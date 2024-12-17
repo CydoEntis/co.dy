@@ -3,12 +3,13 @@ import HeaderNav from "./HeaderNav";
 
 type HeaderProps = {
   onToggle: () => void;
+  onOpenContact: () => void;
   opened: boolean;
 };
-function Header({ onToggle, opened }: HeaderProps) {
+function Header({ onToggle, opened, onOpenContact }: HeaderProps) {
   return (
     <AppShell.Header withBorder={false} bg="primary">
-      <HeaderNav onToggle={onToggle} opened={opened} />
+      <HeaderNav onToggle={onToggle} opened={opened} onOpenContact={onOpenContact}/>
     </AppShell.Header>
   );
 }

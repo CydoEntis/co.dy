@@ -5,6 +5,8 @@
   --modalBackground: #fffbf5;
   --control: #fff;
   --dialog-size: 1200px !important;
+  --inputBg: #ffffff;
+  --text: #998A77;
 }
 
 [data-mantine-color-scheme="dark"] {
@@ -12,6 +14,8 @@
   --modalBackground: #10171f;
   --control: #3a4d63;
   --control-foreground: #f5f5f5;
+  --inputBg: #19212d;
+  --text: #6F89A5;
 }
 
 [data-mantine-color-scheme="light"] {
@@ -19,6 +23,8 @@
   --modalBackground: #fffbf5;
   --control: #fff;
   --control-foregrond: #181818;
+  --inputBg: #ffffff;
+  --text: #998A77;
 }
 
 /* Card border styles */
@@ -41,4 +47,43 @@
 .mantine-Dialog-root {
   width: 800px !important;
   border: 2px solid red;
+}
+
+.mantine-RichTextEditor-root,
+.mantine-RichTextEditor-toolbar,
+.mantine-RichTextEditor-content,
+.mantine-RichTextEditor-controlsGroup,
+.mantine-RichTextEditor-linkEditor,
+.mantine-RichTextEditor-linkEditorSave,
+.mantine-RichTextEditor-linkEditorInput,
+.mantine-RichTextEditor-linkEditorExternalControl,
+.mantine-RichTextEditor-linkEditorDropdown,
+.mantine-RichTextEditor-typographyStylesProvider,
+.mantine-RichTextEditor-control,
+.mantine-RichTextEditor-controlIcon {
+  background: var(--inputBg);
+  border-color: var(--borderColor);
+}
+
+.mantine-RichTextEditor-controlsGroup:hover,
+.mantine-RichTextEditor-linkEditor:hover,
+.mantine-RichTextEditor-linkEditorSave:hover,
+.mantine-RichTextEditor-linkEditorInput:hover,
+.mantine-RichTextEditor-linkEditorExternalControl:hover,
+.mantine-RichTextEditor-linkEditorDropdown:hover,
+.mantine-RichTextEditor-typographyStylesProvider:hover,
+.mantine-RichTextEditor-control:hover,
+.mantine-RichTextEditor-controlIcon:hover {
+  background: var(--modalBackground);
+}
+
+.mantine-TextInput-input,
+.mantine-TextInput-wrapper {
+  background: var(--inputBg);
+  border-color: var(--borderColor);
+}
+
+[data-active] {
+  color: var(--text);
+  font-weight: bold;
 }

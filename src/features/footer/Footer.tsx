@@ -6,7 +6,6 @@ import {
   Stack,
   Title,
   Text,
-  Anchor,
   Button,
 } from "@mantine/core";
 import MeLight from "@/assets/me-light.png";
@@ -17,7 +16,11 @@ import useNavigation from "@/components/navigation/hooks/useNavigation";
 import Link from "@/components/navigation/Link";
 import { useMediaQuery } from "@mantine/hooks";
 
-function Footer() {
+type FooterProps = {
+  onOpenContact: () => void;
+};
+
+function Footer({ onOpenContact }: FooterProps) {
   const { isLightMode } = useGetColorTheme();
   const isDesktop = useMediaQuery("(min-width: 485px)");
 
@@ -65,6 +68,7 @@ function Footer() {
           </Group>
 
           <Button
+            onClick={onOpenContact}
             rightSection={<MoveUpRight size={18} />}
             variant="filled"
             bg="inverse"
@@ -102,6 +106,7 @@ function Footer() {
               sectionId={sectionIds[1]}
             />
             <Button
+              onClick={onOpenContact}
               rightSection={<MoveUpRight size={18} />}
               variant="filled"
               bg="inverse"

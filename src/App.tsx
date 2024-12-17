@@ -17,10 +17,19 @@ import Hero from "./features/hero/Hero";
 import About from "./features/about/About";
 import WorkSection from "./features/work/work-section/WorkSection";
 import Footer from "./features/footer/Footer";
+import ContactModal from "./features/contact/contact-modal/ContactModal";
+import { useDisclosure } from "@mantine/hooks";
 
 function App() {
+  const [contactOpened, { open: openContactForm, close: closeContactForm }] =
+    useDisclosure(false);
+
   return (
-    <Layout>
+    <Layout onOpenContact={openContactForm}>
+      <ContactModal
+        contactOpened={contactOpened}
+        onContactClose={closeContactForm}
+      />
       <SimpleGrid cols={{ base: 1, sm: 2 }} px={{ base: 8, sm: 8, lg: 32 }}>
         <Box pos="relative">
           <Hero />
@@ -33,7 +42,7 @@ function App() {
           <WorkSection />
         </Stack>
       </SimpleGrid>
-      <Footer />
+      <Footer onOpenContact={openContactForm}/>
     </Layout>
   );
 }

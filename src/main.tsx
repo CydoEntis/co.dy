@@ -5,6 +5,7 @@ import App from "./App.tsx";
 
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import '@mantine/tiptap/styles.css';
 import "./index.css";
 
 import theme from "./components/theme/theme.config.ts";
