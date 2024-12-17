@@ -25,7 +25,6 @@ function WorkModal({ selectedWork, opened, onClose }: WorkModalProps) {
     <Modal
       opened={opened}
       onClose={onClose}
-      centered
       withCloseButton={false}
       size="xl"
     >
