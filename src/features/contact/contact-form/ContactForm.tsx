@@ -3,10 +3,13 @@ import RichTextEditor from "../rich-text-editor/RichTextEditor";
 import { useForm } from "@mantine/form";
 import emailjs from "emailjs-com";
 import { MoveUpRight } from "lucide-react";
+import { notifications } from "@mantine/notifications";
 
-type Props = {};
+type ContactFormProps = {
+  onContactClose: () => void;
+};
 
-function ContactForm({}: Props) {
+function ContactForm({ onContactClose }: ContactFormProps) {
   const form = useForm({
     initialValues: {
       firstName: "",
@@ -42,10 +45,21 @@ function ContactForm({}: Props) {
 
     try {
       await emailjs.send(serviceID, templateID, templateParams, publicKey);
-      alert("Your message has been sent!");
+      onContactClose();
+      notifications.show({
+        title: "Message sent",
+        message: "Your message has been sent successfully.",
+        color: "lime",
+        position: "top-right",
+      });
     } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Failed to send your message. Please try again.");
+      const e = error;
+      notifications.show({
+        title: "Message Failed",
+        message: "Your message could not be sent.",
+        color: "red",
+        position: "top-right",
+      });
     }
   };
 
