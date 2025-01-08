@@ -52,8 +52,7 @@ function ContactForm({ onContactClose }: ContactFormProps) {
         color: "lime",
         position: "top-right",
       });
-    } catch (error) {
-      const e = error;
+    } catch {
       notifications.show({
         title: "Message Failed",
         message: "Your message could not be sent.",
