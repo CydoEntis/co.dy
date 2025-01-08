@@ -6,8 +6,6 @@ import Underline from "@tiptap/extension-underline";
 import TextAlign from "@tiptap/extension-text-align";
 import Superscript from "@tiptap/extension-superscript";
 import SubScript from "@tiptap/extension-subscript";
-import { Textarea } from "@mantine/core";
-import { useEffect } from "react";
 
 type RichTextEditorProps = {
   value: string;
