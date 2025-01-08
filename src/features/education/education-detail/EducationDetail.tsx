@@ -1,8 +1,7 @@
-import { Avatar, Flex, Group, Paper, Stack, Text } from "@mantine/core";
+import { Flex, Paper, Stack, Text } from "@mantine/core";
 import { EduDetails } from "./education-details";
 import useGetColorTheme from "../../../components/theme/hooks/useGetColorScheme";
 import { useMediaQuery } from "@mantine/hooks";
-import { Calendar } from "lucide-react";
 
 type EducationDetailProps = {
   education: EduDetails;
