@@ -1,13 +1,8 @@
 import {
   Box,
-  Group,
-  Modal,
+
   SimpleGrid,
   Stack,
-  Title,
-  Text,
-  Image,
-  Button,
 } from "@mantine/core";
 import Layout from "./components/layout/Layout";
 

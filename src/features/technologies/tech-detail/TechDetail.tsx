@@ -1,9 +1,8 @@
 import { Paper, Text } from "@mantine/core";
 import useGetColorTheme from "@/components/theme/hooks/useGetColorScheme";
-import { Technology } from "../my-technologies/technologies";
 
 type TechDetailProps = {
-  technology: Technology;
+  technology: string;
 };
 
 function TechDetail({ technology }: TechDetailProps) {
@@ -15,11 +14,11 @@ function TechDetail({ technology }: TechDetailProps) {
       p={8}
       bg="secondary"
       c="inverse"
-      key={technology.name}
+      key={technology}
       style={{ borderColor: isLightMode ? "#E9E0D9" : "#3A4D63" }}
     >
       <Text size="sm" fw={700} c="altText">
-        {technology.name}
+        {technology}
       </Text>
     </Paper>
   );

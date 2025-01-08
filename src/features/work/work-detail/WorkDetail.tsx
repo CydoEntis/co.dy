@@ -10,6 +10,9 @@ type WorkProps = {
 function WorkDetail({ work, onClick }: WorkProps) {
   const { isLightMode } = useGetColorTheme();
 
+  // Choose images based on the theme
+  const images = isLightMode ? work.imagesLight : work.imagesDark;
+
   return (
     <Card
       padding="xs"
@@ -23,7 +26,12 @@ function WorkDetail({ work, onClick }: WorkProps) {
       onClick={() => onClick(work)}
       h={450}
     >
-      <Image src={work.images[0]} height={280} alt="Norway" radius="md" />
+      <Image
+        src={images[0]}
+        height={280}
+        alt={`${work.name} preview`}
+        radius="md"
+      />
       <Title size="xl" py={8} fw={700}>
         {work.name}
       </Title>
