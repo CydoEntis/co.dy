@@ -30,7 +30,7 @@ function RichTextEditor({ value, onChange }: RichTextEditorProps) {
   });
 
   return (
-    <RTE editor={editor} mb={2} h={300}>
+    <RTE editor={editor} mb={2}>
       <RTE.Toolbar sticky stickyOffset={60}>
         <RTE.ControlsGroup>
           <RTE.Bold />
@@ -74,7 +74,7 @@ function RichTextEditor({ value, onChange }: RichTextEditorProps) {
         </RTE.ControlsGroup>
       </RTE.Toolbar>
 
-      <RTE.Content />
+      <RTE.Content style={{ border: "2px solid red;"}}/>
     </RTE>
   );
 }
