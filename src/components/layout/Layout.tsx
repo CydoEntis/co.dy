@@ -1,5 +1,5 @@
 import { AppShell, Container } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useDocumentTitle } from "@mantine/hooks";
 import Header from "../navigation/header/Header";
 import { ReactNode } from "react";
 
@@ -10,6 +10,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 function Layout({ children, onOpenContact }: LayoutProps) {
+  useDocumentTitle("Cody Stine");
   const [opened, { close, toggle }] = useDisclosure();
 
   return (

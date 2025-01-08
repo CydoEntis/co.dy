@@ -21,7 +21,7 @@ function HeaderNav({ onToggle, opened, onOpenContact }: HeaderNavProps) {
     <Container size="xl" py={24} px={16}>
       <Group justify="space-between" style={{ flex: 1 }}>
         <Title size="xl" mr={60} c="text">
-          Co.dy
+          Cody
         </Title>
         {isDesktop ? (
           <Flex justify="space-between">
