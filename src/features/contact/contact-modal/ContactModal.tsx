@@ -1,4 +1,4 @@
-import { Modal, Title } from "@mantine/core";
+import { Modal } from "@mantine/core";
 import ContactForm from "../contact-form/ContactForm";
 
 type ContactModalProps = {
