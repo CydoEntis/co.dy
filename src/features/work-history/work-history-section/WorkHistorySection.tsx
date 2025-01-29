@@ -8,8 +8,15 @@ function WorkHistorySection() {
     <Section title="Work History">
       <Timeline color="altText" active={4} bulletSize={40} lineWidth={4}>
         {jobs.map((job, index) => (
-          <Timeline.Item bullet={<Text size="xs" fw="700" c="white">{job.initials}</Text>}>
-            <WorkHistoryDetail key={index} job={job} />
+          <Timeline.Item
+            key={index}
+            bullet={
+              <Text size="xs" fw="700" c="white">
+                {job.initials}
+              </Text>
+            }
+          >
+            <WorkHistoryDetail job={job} />
           </Timeline.Item>
         ))}
       </Timeline>

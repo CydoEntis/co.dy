@@ -52,7 +52,7 @@
 
 .mantine-Dialog-root {
   width: 800px !important;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .mantine-RichTextEditor-root,

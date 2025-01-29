@@ -9,13 +9,14 @@ function EducationSection() {
       <Timeline color="altText" active={2} bulletSize={40} lineWidth={4}>
         {education.map((edu, index) => (
           <Timeline.Item
+            key={index}
             bullet={
               <Text size="xs" fw="700" c="white">
                 {edu.initials}
               </Text>
             }
           >
-            <EducationDetail education={edu} key={index} />
+            <EducationDetail education={edu} />
           </Timeline.Item>
         ))}
       </Timeline>
