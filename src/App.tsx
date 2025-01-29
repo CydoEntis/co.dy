@@ -1,9 +1,4 @@
-import {
-  Box,
-
-  SimpleGrid,
-  Stack,
-} from "@mantine/core";
+import { Box, SimpleGrid, Stack } from "@mantine/core";
 import Layout from "./components/layout/Layout";
 
 import WorkHistorySection from "./features/work-history/work-history-section/WorkHistorySection";
@@ -31,13 +26,13 @@ function App() {
         </Box>
 
         <Stack gap={1}>
-          <About />
+          <About onContact={openContactForm} />
           <WorkHistorySection />
           <EducationSection />
           <WorkSection />
         </Stack>
       </SimpleGrid>
-      <Footer onOpenContact={openContactForm}/>
+      <Footer onOpenContact={openContactForm} />
     </Layout>
   );
 }
