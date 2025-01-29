@@ -74,7 +74,7 @@ function RichTextEditor({ value, onChange }: RichTextEditorProps) {
         </RTE.ControlsGroup>
       </RTE.Toolbar>
 
-      <RTE.Content style={{ border: "2px solid red;"}}/>
+      <RTE.Content />
     </RTE>
   );
 }
